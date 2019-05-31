@@ -34,7 +34,7 @@ class TranslateYAndOpacity extends PureComponent {
     const { animateOnDidMount } = this.props;
 
     if (animateOnDidMount) {
-      InteractionManager.runAfterInteractions().then(() => {
+      InteractionManager.runAfterInteractions(() => null).then(() => {
         this.show(this.props);
       });
     }
